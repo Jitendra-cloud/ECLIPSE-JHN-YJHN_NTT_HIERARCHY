@@ -1,0 +1,16 @@
+FUNCTION ZJIT_READ_ACTION.
+*"----------------------------------------------------------------------
+*"*"Local Interface:
+*"  IMPORTING
+*"     REFERENCE(IV_TRAVEL_ID) TYPE  ZJS_DE_TRAVEL_ID
+*"     REFERENCE(IV_INCLUDE_BUFFER) TYPE  ABAP_BOOLEAN DEFAULT
+*"       ABAP_TRUE
+*"  EXPORTING
+*"     REFERENCE(ES_TRAVEL) TYPE  ZJS_TRAVEL
+*"     REFERENCE(ET_BOOKING) TYPE  ZJS_TT_BOOKING
+*"     REFERENCE(ET_BOOKING_SUPPLEMENT) TYPE  ZJS_TT_BOOKING_SUPPLEMENT
+*"     REFERENCE(ET_MESSAGES) TYPE  ZJS_TT_MESSAGE
+*"----------------------------------------------------------------------
+
+
+ENDFUNCTION.

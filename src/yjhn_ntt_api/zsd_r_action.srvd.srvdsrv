@@ -1,0 +1,8 @@
+@EndUserText.label: 'Service Action Defination'
+define service ZSD_R_Action {
+  expose ZC_R_Action        as Action;
+  expose ZC_R_ORGASSIGNMENT as OrgAssignment;
+  expose ZC_R_PERSONALDATA  as PersonalData;
+  expose ZC_R_DATESPEC      as DateSpec;
+  expose ZC_R_COMMUNICATION as Communication;
+}

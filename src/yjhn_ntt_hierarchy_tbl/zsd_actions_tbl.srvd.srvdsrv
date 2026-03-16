@@ -1,0 +1,6 @@
+@EndUserText.label: 'IT0000 - Actions'
+@ObjectModel.leadingEntity.name: 'ZC_Actions_TBL'
+define service ZSD_Actions_TBL {
+  expose ZC_Actions_TBL       as Actions;
+  expose ZC_OrgAssignment_TBL as OrgAss;
+}

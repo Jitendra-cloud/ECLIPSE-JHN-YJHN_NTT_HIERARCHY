@@ -1,0 +1,66 @@
+unmanaged implementation in class zbp_c_r_action_2 unique;
+strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZC_R_Action alias Action
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) PersonnelNumber;
+  association _Communication { create; }
+  association _DateSpec { create; }
+  association _OrgAssignment { create; }
+  association _PersonalData { create; }
+}
+
+define behavior for ZC_R_COMMUNICATION alias Communication
+//late numbering
+lock dependent by _Action
+authorization dependent by _Action
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) PersonnelNumber, SubType;
+  association _Action;
+}
+
+define behavior for ZC_R_DATESPEC alias DateSpec
+//late numbering
+lock dependent by _Action
+authorization dependent by _Action
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) PersonnelNumber;
+  association _Action;
+}
+
+define behavior for ZC_R_ORGASSIGNMENT alias OrgAssignment
+//late numbering
+lock dependent by _Action
+authorization dependent by _Action
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) PersonnelNumber;
+  association _Action;
+}
+
+define behavior for ZC_R_PERSONALDATA alias PersonalData
+//late numbering
+lock dependent by _Action
+authorization dependent by _Action
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) PersonnelNumber;
+  association _Action;
+}

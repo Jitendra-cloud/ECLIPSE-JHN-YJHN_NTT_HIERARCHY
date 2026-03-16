@@ -1,0 +1,35 @@
+@Metadata.layer: #CORE
+annotate entity ZC_OrgAssignment_TBL with
+{
+
+  @UI.lineItem: [{ position: 10 }]
+  Pernr;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Begda;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Endda;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Bukrs;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Werks;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Btrtl;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Persg;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Persk;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Kostl;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Abkrs;
+
+}

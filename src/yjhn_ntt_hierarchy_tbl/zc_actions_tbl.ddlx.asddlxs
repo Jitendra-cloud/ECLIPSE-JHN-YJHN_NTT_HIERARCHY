@@ -1,0 +1,39 @@
+@Metadata.layer: #CORE
+@UI: { headerInfo: {
+                     typeName: 'Action',
+                     typeNamePlural: 'Actions',
+                     title: { type: #STANDARD, value: 'Pernr' }
+                     //,description: { type: #STANDARD, value: 'Agency' }
+                    }
+//       ,presentationVariant: [{
+//           sortOrder: [{ by: 'Agency', direction: #ASC }],
+//           visualizations: [{type: #AS_LINEITEM}]
+//         }]
+     }
+
+annotate entity ZC_Actions_TBL with
+{
+  @UI.facet: [
+                {id: 'Employee', purpose: #STANDARD, type: #LINEITEM_REFERENCE, label: 'Employee', position: 20, targetElement: '_OrgAss' }
+  
+  ]
+
+  @UI.lineItem: [{ position: 10 }]
+  Pernr;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Begda;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Endda;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Massn;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Massg;
+  
+  @UI.lineItem: [{ position: 10 }]
+  Stat2;
+  
+}
